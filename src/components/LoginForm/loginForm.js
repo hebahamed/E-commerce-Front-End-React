@@ -11,12 +11,15 @@ class LoginForm extends Component {
         // this.loginHandler = this.loginHandler.bind(this);
     }
     loginHandler(e) {
-        e.preventDefault();
-        const { userName: { value: userName }, password: { value: password } } = e.target.elements;
-        console.log(userName, password);
-        const res = login({ userName, password });
-        alert("Login Successfuly");
-        this.props.history.push('/allproduct')
+        
+
+            e.preventDefault();
+            const { userName: { value: userName }, password: { value: password } } = e.target.elements;
+            console.log(userName, password);
+            const res = login({ userName, password });
+            // alert("Login Successfuly");
+            this.props.history.push('/allproduct')
+       
     }
     render() {
         return (
