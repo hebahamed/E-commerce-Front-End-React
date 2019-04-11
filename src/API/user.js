@@ -4,13 +4,13 @@ console.log(baseUrl);
 module.exports={
 
     register(user){
-     axios.post(`${baseUrl}/users/`, user).then(res=>res.data)
+     return axios.post(`${baseUrl}/users/`, user).then(res=>res.data).catch(err=>{
+       alert(' Register Failed');
+     })
+
     },
     login(credintial){
-        axios.post(`${baseUrl}/users/login`, credintial).then(res=>{
-             localStorage.setItem('token',res.data.token);
-             localStorage.setItem('userid',res.data.user._id);
-        })
+        return axios.post(`${baseUrl}/users/login`, credintial);
     }
     ,
     getAllProductsFromUser(){

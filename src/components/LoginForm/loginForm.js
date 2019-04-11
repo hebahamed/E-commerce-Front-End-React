@@ -16,9 +16,14 @@ class LoginForm extends Component {
             e.preventDefault();
             const { userName: { value: userName }, password: { value: password } } = e.target.elements;
             console.log(userName, password);
-            const res = login({ userName, password });
-            // alert("Login Successfuly");
-            this.props.history.push('/allproduct')
+            const res = login({ userName, password }).then(res=>{
+                localStorage.setItem('token',res.data.token);
+                localStorage.setItem('userid',res.data.user._id);
+                this.props.history.push('/allproduct');
+            }).catch(err=>{
+                alert("Error (UnAthorization) Try Again");
+            })
+            
        
     }
     render() {

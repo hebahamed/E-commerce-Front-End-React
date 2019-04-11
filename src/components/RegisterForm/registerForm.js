@@ -16,6 +16,8 @@ class RegisterForm extends Component{
         console.log(userName,email,password);
         const res = await register({userName,email,password});
         
+
+        
     }
     render(){
         if(localStorage.getItem('token')===null&& localStorage.getItem('useris')===null)
