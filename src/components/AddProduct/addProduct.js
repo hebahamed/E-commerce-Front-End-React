@@ -20,8 +20,7 @@ addProductHandler=(e)=>{
     category:{value:category} } = e.target.elements;
     let product = {productName,description,price,isOnSale,discount,category}
     this.props.onAdd(product);
-    alert(" Added Successfuly ");
-    // this.props.history.push('/allproduct');
+    this.props.history.push('/allproduct');
 }
     render() {
         if(localStorage.getItem('token')===null&& localStorage.getItem('useris')===null)

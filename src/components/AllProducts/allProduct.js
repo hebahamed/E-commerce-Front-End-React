@@ -8,20 +8,14 @@ import * as actionTypes from '../../store/actions/actionProduct';
 
 class AllProduct extends Component {
     state = {
-        products: []
+        products: [],
+       
     }
     componentDidMount() {
         this.props.onShow();
     }
-    loading(){
-    }
-    
+
     render() {
-        
-        setTimeout(()=>{
-            return(<div><img src="https://visualmodo.com/wp-content/uploads/2018/03/Reasons-Why-
-            Images-Not-Loading-on-Your-Website-2.gif"/></div>
-           )},5000)
         return (
             <>
                 <div className="container">

@@ -26,7 +26,6 @@ class EditProduct extends Component {
         category:{value:category} } = e.target.elements;
         let productUpdated = {productName,description,price,isOnSale,discount,category}
         this.props.onUpdate(productId,productUpdated);
-        // alert("Login Edited");
         // this.props.history.push('/allproduct');
     }
     
