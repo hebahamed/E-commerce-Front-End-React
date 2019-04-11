@@ -90,10 +90,12 @@ export const addProduct = (product)=>{
         axios.post(`${baseUrl}/products/`,product).then(res=>{
             dispatch(addProductToState(product))
             alert("Added Successfuly");
-        }).catch(err=>{
-            alert('Added Failed');
         })
-    }
+        .catch(err=>{
+            alert('Added Failed Try Again ');
+        })
+
+         }
 }
 
 export const deleteProduct = (id)=>{
