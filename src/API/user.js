@@ -4,9 +4,7 @@ console.log(baseUrl);
 module.exports={
 
     register(user){
-     return axios.post(`${baseUrl}/users/`, user).then(res=>res.data).catch(err=>{
-       alert(' Register Failed');
-     })
+     return axios.post(`${baseUrl}/users/`, user);
 
     },
     login(credintial){

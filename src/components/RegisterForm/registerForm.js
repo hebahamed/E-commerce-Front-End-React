@@ -14,7 +14,12 @@ class RegisterForm extends Component{
         e.preventDefault();
         const { userName:{value:userName} , email:{value:email}  , password :{value:password}} = e.target.elements;
         console.log(userName,email,password);
-        const res = await register({userName,email,password});
+        const res = await register({userName,email,password}).then(res=>{
+            this.props.history.push('/userLogin')
+        }).catch(err=>{
+            alert('Registeration Failed');
+        });
+       
         
 
         
