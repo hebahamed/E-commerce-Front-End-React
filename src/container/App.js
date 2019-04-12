@@ -16,23 +16,7 @@ import EditProduct from '../components/EditProduct/editProduct';
 import Loading from '../components/Loading/loading';
 
 class App extends Component {
-  state={
-    falgLoading:false,
-  }
-  loading(){
-    setTimeout(()=>{
-        this.setState({falgLoading:true})
-    },4000)
-}
   render() {
-    if(this.state.falgLoading===false){
-      this.loading();
-      return(
-          <>
-          <Loading></Loading>
-          </>
-      )
-  }
     return (
       <>
 

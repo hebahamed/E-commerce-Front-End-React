@@ -17,7 +17,6 @@ class AllProduct extends Component {
     render() { 
         return (
             <>
-           
                 <div className="container">
                     <Category></Category>
                     <section class="item-listing">
