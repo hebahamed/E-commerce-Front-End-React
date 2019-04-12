@@ -87,14 +87,10 @@ export const addProduct = (product)=>{
 
     return dispatch=>{
         product.userId = localStorage.getItem('userid');
-        axios.post(`${baseUrl}/products/`,product).then(res=>{
+        return axios.post(`${baseUrl}/products/`,product).then(res=>{
             dispatch(addProductToState(product))
             alert("Added Successfuly");
-        })
-        .catch(err=>{
-            alert('Added Failed Try Again ');
-        })
-
+           })
          }
 }
 
@@ -123,13 +119,10 @@ export const updateProduct = (id,productUpdated)=>{
 
     return dispatch=>{
         // console.log(id)
-        axios.patch(`${baseUrl}/products/${id}`,productUpdated).then(res=>{
+       return axios.patch(`${baseUrl}/products/${id}`,productUpdated).then(res=>{
             dispatch(updateProductToState(id,productUpdated))
             // console.log(productUpdated)
             alert("Updated Successfuly");
-        }).catch(err=>{
-            alert("Updated Failed");
-
         })
     }
 }

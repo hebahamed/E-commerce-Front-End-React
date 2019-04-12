@@ -19,8 +19,12 @@ addProductHandler=(e)=>{
     discount:{value:discount},
     category:{value:category} } = e.target.elements;
     let product = {productName,description,price,isOnSale,discount,category}
-    this.props.onAdd(product);
-    // this.props.history.push('/allproduct');
+    this.props.onAdd(product).then(res=>{
+         this.props.history.push('/allproduct');
+    }).catch(err=>{
+        alert('Added Failed Try Again');
+    });
+    
 }
     render() {
         if(localStorage.getItem('token')===null&& localStorage.getItem('useris')===null)

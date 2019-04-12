@@ -25,8 +25,11 @@ class EditProduct extends Component {
         discount:{value:discount},
         category:{value:category} } = e.target.elements;
         let productUpdated = {productName,description,price,isOnSale,discount,category}
-        this.props.onUpdate(productId,productUpdated);
-        // this.props.history.push('/allproduct');
+        this.props.onUpdate(productId,productUpdated).then(res=>{
+            this.props.history.push('/allproduct');
+        }).catch(err=>{
+            alert('Updated Failed Try Again');
+        });
     }
     
     render() {
