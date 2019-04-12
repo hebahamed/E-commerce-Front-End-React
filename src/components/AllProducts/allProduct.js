@@ -3,21 +3,21 @@ import CardItem from '../CardItem/cardItem';
 import Category from '../Category/category';
 import { connect } from 'react-redux';
 import * as actionTypes from '../../store/actions/actionProduct';
+import Loading from '../Loading/loading';
 
 
 
 class AllProduct extends Component {
     state = {
         products: [],
-       
     }
     componentDidMount() {
         this.props.onShow();
     }
-
-    render() {
+    render() { 
         return (
             <>
+           
                 <div className="container">
                     <Category></Category>
                     <section class="item-listing">
@@ -34,6 +34,7 @@ class AllProduct extends Component {
                             </a>
                         </div>
                         <div class="item-listing__items item-listing--3items" style={{ width: "100%" }}>
+                        
                             {this.props.products.map(product => {
                                 return (
                                     <>

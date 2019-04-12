@@ -6,6 +6,18 @@
     text-align: center;
     box-shadow:  2px 2px 3px rgba(0,0,0,0.5 )
 }
+.loading{
+    z-index: 9999;
+
+     img{
+
+         width: 100%;
+         position: static;
+         height: 100vh;
+         z-index: 9999;
+         
+     }
+}
 .btn
 {
     color: $white;
