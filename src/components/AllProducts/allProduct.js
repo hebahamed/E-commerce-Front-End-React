@@ -10,13 +10,29 @@ import Loading from '../Loading/loading';
 class AllProduct extends Component {
     state = {
         products: [],
+        falgLoading: false,
     }
     componentDidMount() {
         this.props.onShow();
     }
-    render() { 
+    loading(){
+        setTimeout(()=>{
+            this.setState({falgLoading:true})
+        },4000)
+    }
+    render() {
+        if(this.state.falgLoading===false){
+            this.loading();
+            return(
+                <>
+                <Loading></Loading>
+                </>
+            )
+        }
+      
         return (
             <>
+           
                 <div className="container">
                     <Category></Category>
                     <section class="item-listing">

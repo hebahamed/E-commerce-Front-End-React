@@ -215,9 +215,6 @@ logOut(){
     
                                 <ul class="nav__items list list--hr">
                                     {/* <!-- items --> */}
-                                    <li class="nav__item">
-                                        <Link class="nav__link" to="/home">Home</Link>
-                                    </li>
                                         
                                     <li class="nav__item dropdown ">
                                         {/* <!-- title --> */}
