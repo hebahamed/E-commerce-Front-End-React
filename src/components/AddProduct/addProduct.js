@@ -20,7 +20,7 @@ addProductHandler=(e)=>{
     category:{value:category} } = e.target.elements;
     let product = {productName,description,price,isOnSale,discount,category}
     this.props.onAdd(product).then(res=>{
-         this.props.history.push('/allproduct');
+         this.props.history.push('/listItem');
     }).catch(err=>{
         alert('Added Failed Try Again');
     });

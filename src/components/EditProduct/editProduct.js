@@ -26,7 +26,7 @@ class EditProduct extends Component {
         category:{value:category} } = e.target.elements;
         let productUpdated = {productName,description,price,isOnSale,discount,category}
         this.props.onUpdate(productId,productUpdated).then(res=>{
-            this.props.history.push('/allproduct');
+            this.props.history.push('/listItem');
         }).catch(err=>{
             alert('Updated Failed Try Again');
         });

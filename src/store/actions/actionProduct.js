@@ -89,7 +89,7 @@ export const addProduct = (product)=>{
         product.userId = localStorage.getItem('userid');
         return axios.post(`${baseUrl}/products/`,product).then(res=>{
             dispatch(addProductToState(product))
-            alert("Added Successfuly");
+            // alert("Added Successfuly");
            })
          }
 }
@@ -122,7 +122,7 @@ export const updateProduct = (id,productUpdated)=>{
        return axios.patch(`${baseUrl}/products/${id}`,productUpdated).then(res=>{
             dispatch(updateProductToState(id,productUpdated))
             // console.log(productUpdated)
-            alert("Updated Successfuly");
+            // alert("Updated Successfuly");
         })
     }
 }
