@@ -13,16 +13,18 @@ class AllProduct extends Component {
         falgLoading: false,
     }
     componentDidMount() {
-        this.props.onShow();
+        this.props.onShow().then(res=>{
+          this.setState({falgLoading:true})
+        });
     }
-    loading(){
-        setTimeout(()=>{
-            this.setState({falgLoading:true})
-        },4000)
-    }
+    // loading(){
+    //     setTimeout(()=>{
+    //         this.setState({falgLoading:true})
+    //     },4000)
+    // }
     render() {
         if(this.state.falgLoading===false){
-            this.loading();
+            // this.loading();
             return(
                 <>
                 <Loading></Loading>

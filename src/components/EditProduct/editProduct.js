@@ -10,7 +10,7 @@ import { updateProduct } from '../../API/product'
 class EditProduct extends Component {
 
     state = {
-        product:{}
+        product:{},
     }
     componentDidMount(){
         this.props.onDetails(this.props.match.params.productId);
@@ -41,7 +41,7 @@ class EditProduct extends Component {
                     <form onSubmit={this.editProductHandler}>
 
                         <label htmlFor="">Name</label>
-                        <input className="form-control"  type="text" name="productName" id="" />
+                        <input className="form-control"  type="text" name="productName" id=""/>
 
                         <label htmlFor="">Description</label>
                         <textarea className="form-control" name="description" id="" cols="30" rows="4" ></textarea>

@@ -65,7 +65,7 @@ export const deleteProductToState = (id)=>{
 
 export const  GettAllProduct = ()=>{
     return dispatch =>{
-        axios.get(`${baseUrl}/products/`)
+        return axios.get(`${baseUrl}/products/`)
         .then(res=>{
             // console.log(res.data);
             dispatch(getAllProductToState(res.data));
